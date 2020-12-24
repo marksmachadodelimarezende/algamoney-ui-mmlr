@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'algamoney-ui-mmlr';
+  titleResult: String;
+
+  toUpper = () => this.titleResult = this.title.toUpperCase();
 }
