@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {TabViewModule} from 'primeng/tabview';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {TabViewModule} from 'primeng/tabview';
     FormsModule,
     InputTextModule,
     ButtonModule,
-    TabViewModule
+    TabViewModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

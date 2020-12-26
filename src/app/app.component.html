@@ -1,26 +1,46 @@
-<p-tabView>
-  
-  <p-tabPanel header="Formulário">
-    <div class="containerRows">
-      <div>
-        <span class="p-float-label">
-          <input id="float-input" type="text" pInputText [(ngModel)]="title" />
-          <label for="float-input">Title Page Teste PrimeNG</label>
-        </span>
-      </div>
-      <div>
-        <button
-          pButton
-          type="button"
-          label="Uppercase"
-          (click)="toUpper()"
-        ></button>
-      </div>
-    </div>
-  </p-tabPanel>
+<div class="p-grid">
+  <div class="p-col-12">
+    <h1>Lançamentos</h1>
+  </div>
 
-  <p-tabPanel header="Resultado">
-    <p>{{ titleResult }}</p>
-  </p-tabPanel>
+  <div class="p-col-12 p-fluid">
+    <label>Descrição</label>
+    <input pInputText type="text" />
+  </div>
 
-</p-tabView>
+  <div class="p-col-12">
+    <label>Vencimento</label>
+    <input pInputText type="text" class="input-date" />
+    <label style="display: inline">até</label>
+    <input pInputText type="text" class="input-date" />
+  </div>
+
+  <div class="p-col-12">
+    <button pButton type="button" label="Pesquisar"></button>
+  </div>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-12">
+    <p-table [value]="lancamentos" styleClass="p-datatable-gridlines">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Pessoa</th>
+          <th>Descrição</th>
+          <th class="col-data-header">Vencimento</th>
+          <th class="col-data-header">Pagamento</th>
+          <th class="col-valor-header">Valor</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-lancamento>
+        <tr>
+          <td>{{ lancamento.pessoa }}</td>
+          <td>{{ lancamento.descricao }}</td>
+          <td class="col-data-content">{{ lancamento.dataVencimento }}</td>
+          <td class="col-data-content">{{ lancamento.dataPagamento }}</td>
+          <td class="col-valor-content">{{ lancamento.valor }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
