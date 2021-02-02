@@ -25,12 +25,12 @@
     <p-table [value]="lancamentos" styleClass="p-datatable-gridlines" [paginator]="true" [rows]="5">
       <ng-template pTemplate="header">
         <tr>
-          <th>Pessoa</th>
-          <th>Descrição</th>
-          <th class="col-data-header">Vencimento</th>
-          <th class="col-data-header">Pagamento</th>
-          <th style="text-align: right; width: 100px;">Valor</th>
-          <th style="width: 90px;" colspan="2"></th>
+          <th id="pessoa">Pessoa</th>
+          <th id="descricao">Descrição</th>
+          <th id="vencimento" class="col-data-header">Vencimento</th>
+          <th id="pagamento" class="col-data-header">Pagamento</th>
+          <th id="valor" style="text-align: right; width: 100px;">Valor</th>
+          <th id="btnAcoes" style="width: 90px;" colspan="2"></th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-lancamento>
