@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {TabViewModule} from 'primeng/tabview';
@@ -21,7 +23,8 @@ import { TableModule } from 'primeng/table';
     InputTextModule,
     ButtonModule,
     TabViewModule,
-    TableModule
+    TableModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
