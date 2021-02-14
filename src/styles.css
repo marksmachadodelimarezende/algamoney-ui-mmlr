@@ -8,13 +8,11 @@ body {
 }
 
 .containerApp {
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0px 40px 0px 40px;
 }
 
 .bodyApp {
-  max-width: 1400px;
+  max-width: 900px;
 }
 
 label {

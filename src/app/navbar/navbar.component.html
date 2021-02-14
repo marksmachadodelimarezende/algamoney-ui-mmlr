@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="containerApp">
+    <div class="p-grid">
+      <div class="p-col-12">
+        <a (click)="toggleMenuBar()">
+          <fa-icon [icon]="faBars" style="color: white"></fa-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar-container" *ngIf="exibirMenu">
+    <div class="navbar-menu-close">
+      <fa-icon [icon]="faEyeSlash" style="color: #525151;" pTooltip="Fechar menu" tooltipPosition="right" (click)="toggleMenuBar()"></fa-icon>
+    </div>
+    <div class="navbar-container-usuario">
+      <span class="navbar-container-usuario-text">Zezinho</span>
+    </div>
+    <ul class="navbar-menu" *ngFor="let menuItem of menuList">
+      <li (click)="abrirPelaRota(menuItem.rota)">
+        <fa-icon [icon]="menuItem.icon" *ngIf="!!menuItem.icon"></fa-icon>
+        {{menuItem.label}}
+      </li>
+    </ul>
+  </div>
+</nav>
